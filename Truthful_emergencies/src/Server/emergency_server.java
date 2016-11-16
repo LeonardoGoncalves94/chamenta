@@ -27,9 +27,9 @@ public class emergency_server implements Iemergency
     private static String location;
     private static int injury_num;
     private static String type_injury;
-    private static String jorge = "C:/Users/jorge/OneDrive/Documentos/Java SIRS/Truthful_emergencies/Log/Logfile.txt";
-    private static String jorge2 = "C:/Users/jorge/OneDrive/Documentos/Java SIRS/Truthful_emergencies/Log/Offensefile.txt";
-    private static String jorge3 = "C:/Users/jorge/OneDrive/Documentos/Java SIRS/Truthful_emergencies/Log/Keys.txt";
+    private static String jorge = "C:/Users/jorge/OneDrive/Documentos/GitHub/chamenta/Truthful_emergencies/src/Log/Logfile.txt";
+    private static String jorge2 = "C:/Users/jorge/OneDrive/Documentos/GitHub/chamenta/Truthful_emergencies/src/Log/Offensefile.txt";
+    private static String jorge3 = "C:/Users/jorge/OneDrive/Documentos/GitHub/chamenta/Truthful_emergencies/src/Log/Keys.txt";
     private static String leo = "C:/Users/lj0se/IdeaProjects/Truthful_emergencies/Log/Logfile.txt";
     private static String leo2 = "C:/Users/lj0se/IdeaProjects/Truthful_emergencies/Log/Offensefile.txt";
     private static int session = 1;
@@ -37,7 +37,6 @@ public class emergency_server implements Iemergency
     private static String key;
 
     public emergency_server(){
-        generateKey();
         writeKeyFile();
     }
 
@@ -139,7 +138,7 @@ public class emergency_server implements Iemergency
                 bw.close();
         }
         catch(IOException e){
-            System.out.println("Error 1 on file");
+            System.out.println("Error 1 on file:" + e);
         }
         catch(Exception e){
             System.out.println("Error Encrypting session");
@@ -153,16 +152,23 @@ public class emergency_server implements Iemergency
 
             if (!file.exists()) {
                 file.createNewFile();
+
+                generateKey();
+                FileWriter fileWriter = new FileWriter(file.getAbsoluteFile(), true);
+                BufferedWriter bw = new BufferedWriter(fileWriter);
+
+                bw.write(key + "\n");
+                bw.close();
+            }
+            else{
+                BufferedReader br = new BufferedReader(new FileReader(jorge3));
+                this.key=br.readLine();
             }
 
-            FileWriter fileWriter = new FileWriter(file.getAbsoluteFile(), true);
-            BufferedWriter bw = new BufferedWriter(fileWriter);
 
-            bw.write(key + "\n");
-            bw.close();
         }
         catch(IOException e){
-            System.out.println("Error 1 on file");
+            System.out.println("Error writing on key file");
         }
     }
 
@@ -201,7 +207,7 @@ public class emergency_server implements Iemergency
 
         byte[] encryptedString = encryptCipher.doFinal(str.getBytes());
         //return printHexBinary(encryptedString);
-        return printHexBinary(encryptedString);
+        return printBase64Binary(encryptedString);
     }
 
     public static String decryptString(String str) throws Exception{
@@ -213,23 +219,10 @@ public class emergency_server implements Iemergency
         SecretKeySpec skeySpec = new SecretKeySpec(byteKey, "AES");
         encryptCipher.init(Cipher.DECRYPT_MODE, skeySpec);
 
-        byte[] text = fromHexString(str);
 
-        byte[] decrypted = encryptCipher.doFinal(text);
+        byte[] decrypted = encryptCipher.doFinal(parseBase64Binary(str));
         newString = new String(decrypted, "ASCII");
 
         return newString;
     }
-
-    public static byte[] fromHexString(String s) {
-        int len = s.length();
-        byte[] data = new byte[len / 2];
-        for (int i = 0; i < len; i += 2) {
-            data[i / 2] = (byte) ((Character.digit(s.charAt(i), 16) << 4)
-                    + Character.digit(s.charAt(i+1), 16));
-        }
-        return data;
-    }
-
-
 }
