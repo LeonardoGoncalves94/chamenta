@@ -110,11 +110,14 @@ public class emergency_server implements Iemergency
                 FileWriter fileWriter = new FileWriter(file.getAbsoluteFile(), true);
                 BufferedWriter bw = new BufferedWriter(fileWriter);
 
-                bw.write("New offense on " + getData()+ "\n");
+                bw.write(encryptString("New offense on " + getData())+ "\n");
                 bw.close();
             }
             catch(IOException e){
                 System.out.println("Error on offense file!");
+            }
+            catch(Exception e){
+                System.out.println("Error Encrypting offenses file!");
             }
         }
     }
