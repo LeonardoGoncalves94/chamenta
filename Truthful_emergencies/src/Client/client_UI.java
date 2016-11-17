@@ -48,7 +48,6 @@ public class client_UI implements Interface.IClient{
             client = (Interface.IClient)this;
 
             generateSecret();
-
             stub.registerChannel(encryptRSA());
         }
         catch(Exception e){
@@ -131,12 +130,10 @@ public class client_UI implements Interface.IClient{
 
 
             Key serverKey = stub.getPublicKey();
-            byte[] encoded = serverKey.getEncoded();
             Cipher cipher = Cipher.getInstance("RSA");
             cipher.init(Cipher.ENCRYPT_MODE, serverKey);
             byte[] cipherData = cipher.doFinal(sessionKey.getBytes());
-            System.out.println("PUBLIC KEY: "+ printHexBinary(encoded));
-             return printHexBinary(cipherData);
+            return printHexBinary(cipherData);
     }
 
     public void sendFeedback(boolean bool){
