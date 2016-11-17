@@ -2,13 +2,23 @@ package Client;
 
 import Interface.Iemergency;
 
+import javax.crypto.Cipher;
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
+import java.security.Key;
+import java.security.KeyPair;
+import java.security.KeyPairGenerator;
+import javax.crypto.spec.SecretKeySpec;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
+import java.security.PublicKey;
 import java.util.Random;
+
+import static javax.xml.bind.DatatypeConverter.printHexBinary;
 
 public class client_UI implements Interface.IClient{
     private JComboBox typeComboBox;
@@ -26,6 +36,7 @@ public class client_UI implements Interface.IClient{
     private String typeInjury;
     private Iemergency stub;
     private Interface.IClient client;
+    private static String sessionKey;
 
 
     public client_UI() {
@@ -36,6 +47,10 @@ public class client_UI implements Interface.IClient{
 
             client = (Interface.IClient)this;
 
+            generateSecret();
+            System.out.println("SESSION_KEY: "+sessionKey);
+
+            stub.registerChannel(encryptRSA());
         }
         catch(Exception e){
             System.err.println("Client exception: " + e.toString());
@@ -90,6 +105,7 @@ public class client_UI implements Interface.IClient{
 
     public static void main(String[] args)
     {
+
         JFrame frame = new JFrame("cient_UI");
         frame.setContentPane(new client_UI().panelMain);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -97,6 +113,31 @@ public class client_UI implements Interface.IClient{
         frame.setVisible(true);
 
        // String host = (args.length < 1) ? null : args[0];
+    }
+    private static void generateSecret(){
+        try {
+
+            KeyGenerator generator = KeyGenerator.getInstance("AES");
+            generator.init(128);
+            SecretKey skey = generator.generateKey();
+            byte[] raw = skey.getEncoded();
+            sessionKey = printHexBinary(raw);
+        }
+        catch(Exception e) {
+            System.out.println("Error Creating key: " + e);
+        }
+    }
+    public String encryptRSA() throws Exception
+    {
+
+
+            Key serverKey = stub.getPublicKey();
+            byte[] encoded = serverKey.getEncoded();
+            Cipher cipher = Cipher.getInstance("RSA");
+            cipher.init(Cipher.ENCRYPT_MODE, serverKey);
+            byte[] cipherData = cipher.doFinal(sessionKey.getBytes());
+            System.out.println("PUBLIC KEY: "+ printHexBinary(encoded));
+             return printHexBinary(cipherData);
     }
 
     public void sendFeedback(boolean bool){

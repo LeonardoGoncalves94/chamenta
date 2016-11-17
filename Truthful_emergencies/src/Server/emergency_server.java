@@ -7,6 +7,9 @@ import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
+import java.security.Key;
+import java.security.KeyPair;
+import java.security.KeyPairGenerator;
 import java.io.*;
 import java.rmi.registry.Registry;
 import java.rmi.registry.LocateRegistry;
@@ -32,6 +35,7 @@ public class emergency_server implements Iemergency
     private static int session = 1;
     private static boolean EmergencyReceived = false;
     private static String key;
+    private static KeyPair KeyPair;
     private List<String> ConnectedClients = new ArrayList<String>();
     private int id;
 
@@ -41,8 +45,12 @@ public class emergency_server implements Iemergency
 
     public static void main(String []args)
     {
-        try {
 
+
+        try {
+            generateKeyPair();
+            System.out.println("PUBLIC_KEY: "+ printHexBinary(KeyPair.getPublic().getEncoded()));
+            System.out.println("PRIVATE_KEY: "+ printHexBinary(KeyPair.getPrivate().getEncoded()));
             emergency_server obj = new emergency_server();
             Iemergency stub = (Iemergency) UnicastRemoteObject.exportObject(obj, 0);
 
@@ -85,9 +93,20 @@ public class emergency_server implements Iemergency
 
     //////////////////////////////////////////
     //REMOTE FUNCTIONS
-    public int registerChannel(String secretEncryptedWPublicKey){
+    public String decryptSecret  (String sharedSecret) throws Exception
+    {
+        Cipher cipher = Cipher.getInstance("RSA");
+        cipher.init(cipher.DECRYPT_MODE,KeyPair.getPrivate());
+        byte[] decoded = cipher.doFinal(parseHexBinary(sharedSecret));
+        String str = new String(decoded,"ASCII");
+        //return printHexBinary(decoded);
+        return str;
+    }
+    public int registerChannel(String sharedSecret)throws Exception{
+
         String secret = "";
-        //secret = decriptSecret(secretEncryptedWPublicKey);
+        secret = decryptSecret(sharedSecret);
+        System.out.println("SESSION KEY: "+secret);
         addClient(id, secret);
         return id;
     }
@@ -125,6 +144,11 @@ public class emergency_server implements Iemergency
                 System.out.println("Error Encrypting offenses file!");
             }
         }
+    }
+
+    public Key getPublicKey()
+    {
+        return KeyPair.getPublic();
     }
 
     //END OF REMOTE FUNCTIONS
@@ -193,6 +217,12 @@ public class emergency_server implements Iemergency
         return data;
     }
 
+    private static void generateKeyPair()throws Exception{
+        KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("RSA");
+        keyPairGenerator.initialize(1024);
+        KeyPair = keyPairGenerator.genKeyPair();
+
+    }
 
     private void generateKey(){
     try {
