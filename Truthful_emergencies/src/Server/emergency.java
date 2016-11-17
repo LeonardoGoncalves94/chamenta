@@ -46,7 +46,7 @@ public class emergency extends emergency_server {
             FileWriter fileWriter = new FileWriter(file.getAbsoluteFile(), true);
             BufferedWriter bw = new BufferedWriter(fileWriter);
 
-            bw.write(encryptString(finalText) + "\n");
+            bw.write(encryptString(finalText, getFileKey()) + "\n");
             bw.close();
         }
         catch(IOException e){

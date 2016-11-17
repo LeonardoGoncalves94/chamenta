@@ -1,0 +1,3 @@
+New Session 1 on: 15:09:22 of 17/11/2016
+	15:09:50: 123 ambulances sent to Lisboa
+	15:09:53: 1234 ambulances sent to Lisboa

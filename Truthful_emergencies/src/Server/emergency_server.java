@@ -14,10 +14,7 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.security.Key;
 import java.text.SimpleDateFormat;
-import java.util.Base64;
-import java.util.Calendar;
-import java.util.Scanner;
-import java.util.Date;
+import java.util.*;
 
 import static javax.xml.bind.DatatypeConverter.*;
 
@@ -35,6 +32,8 @@ public class emergency_server implements Iemergency
     private static int session = 1;
     private static boolean EmergencyReceived = false;
     private static String key;
+    private List<String> ConnectedClients = new ArrayList<String>();
+    private int id;
 
     public emergency_server(){
         writeKeyFile();
@@ -63,14 +62,13 @@ public class emergency_server implements Iemergency
         while(true);
 
     }
-   static public void getSession() // tá a entrar no if(parts[1].equals("Session")) sempre
-    {
+   static public void getSession(){
         int countSeenSessions = 0;
 
         try (BufferedReader br = new BufferedReader(new FileReader(jorge))) {
             String line;
             while ((line = br.readLine()) != null) {
-                line = decryptString(line);
+                line = decryptString(line, key);
                 String[] parts = line.split(" ");
                 if(parts[1].equals("Session"))
                 {
@@ -85,8 +83,15 @@ public class emergency_server implements Iemergency
         session = countSeenSessions + 1;
     }
 
-
+    //////////////////////////////////////////
     //REMOTE FUNCTIONS
+    public int registerChannel(String secretEncryptedWPublicKey){
+        String secret = "";
+        //secret = decriptSecret(secretEncryptedWPublicKey);
+        addClient(id, secret);
+        return id;
+    }
+
     public  void receiveMessage(int number, String type, String location, IClient client){
 
         new emergency(location, number, type);
@@ -110,7 +115,7 @@ public class emergency_server implements Iemergency
                 FileWriter fileWriter = new FileWriter(file.getAbsoluteFile(), true);
                 BufferedWriter bw = new BufferedWriter(fileWriter);
 
-                bw.write(encryptString("New offense on " + getData())+ "\n");
+                bw.write(encryptString("New offense on " + getData(), key)+ "\n");
                 bw.close();
             }
             catch(IOException e){
@@ -123,6 +128,7 @@ public class emergency_server implements Iemergency
     }
 
     //END OF REMOTE FUNCTIONS
+    ///////////////////////////////////////////
 
     private static void createFileEntry(){
 
@@ -137,7 +143,7 @@ public class emergency_server implements Iemergency
                 FileWriter fileWriter = new FileWriter(file.getAbsoluteFile(), true);
                 BufferedWriter bw = new BufferedWriter(fileWriter);
 
-                bw.write(encryptString(str) + "\n");
+                bw.write(encryptString(str, key) + "\n");
                 bw.close();
         }
         catch(IOException e){
@@ -202,18 +208,17 @@ public class emergency_server implements Iemergency
     }
 }
 
-    public static String encryptString(String str) throws Exception{
+    public static String encryptString(String str, String key) throws Exception{
         Cipher encryptCipher = Cipher.getInstance("AES");
         byte[] byteKey = parseHexBinary(key);
         SecretKeySpec skeySpec = new SecretKeySpec(byteKey, "AES");
         encryptCipher.init(Cipher.ENCRYPT_MODE, skeySpec);
 
         byte[] encryptedString = encryptCipher.doFinal(str.getBytes());
-        //return printHexBinary(encryptedString);
         return printBase64Binary(encryptedString);
     }
 
-    public static String decryptString(String str) throws Exception{
+    public static String decryptString(String str, String key) throws Exception{
 
         String newString = "";
 
@@ -227,5 +232,18 @@ public class emergency_server implements Iemergency
         newString = new String(decrypted, "ASCII");
 
         return newString;
+    }
+
+    public String getFileKey(){
+        return key;
+    }
+
+    private void addClient(int id, String secret){       //ADD CLIENT INFO AS PARAMETERS
+        ConnectedClients.add(id + "," + secret);
+    }
+
+    private void removeClient(int id){
+
+        ConnectedClients.remove(id+1);
     }
 }
