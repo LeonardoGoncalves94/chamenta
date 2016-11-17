@@ -48,7 +48,6 @@ public class client_UI implements Interface.IClient{
             client = (Interface.IClient)this;
 
             generateSecret();
-            System.out.println("SESSION_KEY: "+sessionKey);
 
             stub.registerChannel(encryptRSA());
         }

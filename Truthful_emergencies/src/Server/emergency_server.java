@@ -49,8 +49,6 @@ public class emergency_server implements Iemergency
 
         try {
             generateKeyPair();
-            System.out.println("PUBLIC_KEY: "+ printHexBinary(KeyPair.getPublic().getEncoded()));
-            System.out.println("PRIVATE_KEY: "+ printHexBinary(KeyPair.getPrivate().getEncoded()));
             emergency_server obj = new emergency_server();
             Iemergency stub = (Iemergency) UnicastRemoteObject.exportObject(obj, 0);
 
@@ -99,15 +97,12 @@ public class emergency_server implements Iemergency
         cipher.init(cipher.DECRYPT_MODE,KeyPair.getPrivate());
         byte[] decoded = cipher.doFinal(parseHexBinary(sharedSecret));
         String str = new String(decoded,"ASCII");
-        //return printHexBinary(decoded);
         return str;
     }
     public int registerChannel(String sharedSecret)throws Exception{
 
         String secret = "";
-        secret = decryptSecret(sharedSecret);
-        System.out.println("SESSION KEY: "+secret);
-        addClient(id, secret);
+        addClient(id, decryptSecret(sharedSecret));
         return id;
     }
 
