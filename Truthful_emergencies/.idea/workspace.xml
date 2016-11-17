@@ -26,11 +26,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1768">
               <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1969#1970#0" expanded="false" />
-                <element signature="e#2040#2041#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -47,7 +43,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IClient.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Interface/IClient.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
@@ -57,24 +53,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="emergency_server.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="emergency_server.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Server/emergency_server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="62" column="46" selection-start-line="62" selection-start-column="46" selection-end-line="62" selection-end-column="46" />
+            <state relative-caret-position="279">
+              <caret line="91" column="18" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1448#1456#0" expanded="true" />
+                <element signature="method#main#0;class#emergency_server#0" expanded="false" />
+                <element signature="method#getSession#0;class#emergency_server#0" expanded="false" />
+                <element signature="method#receiveMessage#0;class#emergency_server#0" expanded="false" />
+                <element signature="method#checkOffense#0;class#emergency_server#0" expanded="false" />
+                <element signature="method#createFileEntry#0;class#emergency_server#0" expanded="false" />
+                <element signature="method#writeKeyFile#0;class#emergency_server#0" expanded="false" />
+                <element signature="method#getData#0;class#emergency_server#0" expanded="false" />
+                <element signature="method#generateKey#0;class#emergency_server#0" expanded="false" />
+                <element signature="method#encryptString#0;class#emergency_server#0" expanded="false" />
+                <element signature="method#decryptString#0;class#emergency_server#0" expanded="false" />
+                <element signature="e#7390#7391#0" expanded="true" />
+                <element signature="e#7483#7484#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="String.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/String.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15742">
-              <caret line="981" column="0" selection-start-line="981" selection-start-column="0" selection-end-line="981" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -82,8 +80,8 @@
       <file leaf-file-name="emergency.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Server/emergency.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+            <state relative-caret-position="816">
+              <caret line="48" column="58" selection-start-line="48" selection-start-column="58" selection-end-line="48" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,10 +114,10 @@
         <option value="$PROJECT_DIR$/src/Client/cient_UI.java" />
         <option value="$PROJECT_DIR$/src/Client/client_UI.form" />
         <option value="$PROJECT_DIR$/src/Interface/Iemergency.java" />
-        <option value="$PROJECT_DIR$/src/Server/emergency.java" />
         <option value="$PROJECT_DIR$/src/Client/client_UI.java" />
-        <option value="$PROJECT_DIR$/src/Server/emergency_server.java" />
         <option value="$PROJECT_DIR$/src/Interface/IClient.java" />
+        <option value="$PROJECT_DIR$/src/Server/emergency.java" />
+        <option value="$PROJECT_DIR$/src/Server/emergency_server.java" />
       </list>
     </option>
   </component>
@@ -133,8 +131,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1378" />
-    <option name="height" value="744" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -161,6 +159,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -210,6 +211,20 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Truthful_emergencies" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Truthful_emergencies" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Interface" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -232,16 +247,9 @@
               <option name="myItemId" value="Client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client_UI" />
-              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -249,11 +257,11 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8 (1)" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../decryptor" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.emergency_server">
+  <component name="RunManager" selected="Application.emergency_client">
     <configuration default="false" name="emergency_server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -573,32 +581,32 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32608697" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32649842" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22246696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22181553" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39747635" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33850932" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -616,7 +624,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="37" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Server/emergency_server.java</url>
+          <line>69</line>
+          <properties />
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="42" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -629,11 +645,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1969#1970#0" expanded="false" />
-            <element signature="e#2040#2041#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -642,7 +654,19 @@
         <state relative-caret-position="425">
           <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1448#1456#0" expanded="true" />
+            <element signature="method#main#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#getSession#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#receiveMessage#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#checkOffense#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#createFileEntry#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#writeKeyFile#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#getData#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#generateKey#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#encryptString#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#decryptString#0;class#emergency_server#0" expanded="false" />
+            <element signature="e#7390#7391#0" expanded="true" />
+            <element signature="e#7483#7484#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -671,11 +695,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1969#1970#0" expanded="false" />
-            <element signature="e#2040#2041#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -684,7 +704,19 @@
         <state relative-caret-position="833">
           <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1448#1456#0" expanded="true" />
+            <element signature="method#main#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#getSession#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#receiveMessage#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#checkOffense#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#createFileEntry#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#writeKeyFile#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#getData#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#generateKey#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#encryptString#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#decryptString#0;class#emergency_server#0" expanded="false" />
+            <element signature="e#7390#7391#0" expanded="true" />
+            <element signature="e#7483#7484#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -713,11 +745,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1156">
           <caret line="68" column="61" selection-start-line="68" selection-start-column="61" selection-end-line="68" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1969#1970#0" expanded="false" />
-            <element signature="e#2040#2041#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -726,7 +754,19 @@
         <state relative-caret-position="17">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1448#1456#0" expanded="true" />
+            <element signature="method#main#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#getSession#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#receiveMessage#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#checkOffense#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#createFileEntry#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#writeKeyFile#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#getData#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#generateKey#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#encryptString#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#decryptString#0;class#emergency_server#0" expanded="false" />
+            <element signature="e#7390#7391#0" expanded="true" />
+            <element signature="e#7483#7484#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -755,11 +795,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1969#1970#0" expanded="false" />
-            <element signature="e#2040#2041#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -769,7 +805,19 @@
         <state relative-caret-position="68">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1448#1456#0" expanded="true" />
+            <element signature="method#main#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#getSession#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#receiveMessage#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#checkOffense#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#createFileEntry#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#writeKeyFile#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#getData#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#generateKey#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#encryptString#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#decryptString#0;class#emergency_server#0" expanded="false" />
+            <element signature="e#7390#7391#0" expanded="true" />
+            <element signature="e#7483#7484#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -778,11 +826,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1969#1970#0" expanded="false" />
-            <element signature="e#2040#2041#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -792,7 +836,19 @@
         <state relative-caret-position="68">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1448#1456#0" expanded="true" />
+            <element signature="method#main#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#getSession#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#receiveMessage#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#checkOffense#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#createFileEntry#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#writeKeyFile#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#getData#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#generateKey#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#encryptString#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#decryptString#0;class#emergency_server#0" expanded="false" />
+            <element signature="e#7390#7391#0" expanded="true" />
+            <element signature="e#7483#7484#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -801,11 +857,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1969#1970#0" expanded="false" />
-            <element signature="e#2040#2041#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -815,7 +867,19 @@
         <state relative-caret-position="68">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1448#1456#0" expanded="true" />
+            <element signature="method#main#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#getSession#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#receiveMessage#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#checkOffense#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#createFileEntry#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#writeKeyFile#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#getData#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#generateKey#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#encryptString#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#decryptString#0;class#emergency_server#0" expanded="false" />
+            <element signature="e#7390#7391#0" expanded="true" />
+            <element signature="e#7483#7484#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -833,7 +897,19 @@
         <state relative-caret-position="51">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1448#1456#0" expanded="true" />
+            <element signature="method#main#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#getSession#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#receiveMessage#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#checkOffense#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#createFileEntry#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#writeKeyFile#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#getData#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#generateKey#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#encryptString#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#decryptString#0;class#emergency_server#0" expanded="false" />
+            <element signature="e#7390#7391#0" expanded="true" />
+            <element signature="e#7483#7484#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -851,7 +927,19 @@
         <state relative-caret-position="51">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1448#1456#0" expanded="true" />
+            <element signature="method#main#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#getSession#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#receiveMessage#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#checkOffense#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#createFileEntry#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#writeKeyFile#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#getData#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#generateKey#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#encryptString#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#decryptString#0;class#emergency_server#0" expanded="false" />
+            <element signature="e#7390#7391#0" expanded="true" />
+            <element signature="e#7483#7484#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -925,58 +1013,18 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Client/client_UI.form">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider editor-type-id="ui-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15742">
-          <caret line="981" column="0" selection-start-line="981" selection-start-column="0" selection-end-line="981" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.504/AESKeyGenerator.java" />
     <entry file="file://$USER_HOME$/Desktop/AESCipherByteArrayMixer.java" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.184/AESKeyGenerator.java" />
-    <entry file="file://$PROJECT_DIR$/src/Server/emergency_server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="62" column="46" selection-start-line="62" selection-start-column="46" selection-end-line="62" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Client/client_UI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1768">
-          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1969#1970#0" expanded="false" />
-            <element signature="e#2040#2041#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/emergency.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Interface/Iemergency.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -987,11 +1035,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="985" column="26" selection-start-line="985" selection-start-column="26" selection-end-line="985" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Interface/IClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Client/client_UI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1768">
+          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/emergency.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="58" selection-start-line="48" selection-start-column="58" selection-end-line="48" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/emergency_server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="91" column="18" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
+          <folding>
+            <element signature="e#1448#1456#0" expanded="true" />
+            <element signature="method#main#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#getSession#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#receiveMessage#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#checkOffense#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#createFileEntry#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#writeKeyFile#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#getData#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#generateKey#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#encryptString#0;class#emergency_server#0" expanded="false" />
+            <element signature="method#decryptString#0;class#emergency_server#0" expanded="false" />
+            <element signature="e#7390#7391#0" expanded="true" />
+            <element signature="e#7483#7484#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
